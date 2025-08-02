@@ -51,7 +51,7 @@ app.get("/config", async (c) => {
   const ref = db.collection("config").doc("config");
   const snapshot = await ref.get();
 
-  if (snapshot.empty) {
+  if (!snapshot.exists) {
     return c.json({ message: "No config found" }, 200);
   }
 
