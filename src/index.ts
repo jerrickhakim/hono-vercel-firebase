@@ -14,10 +14,13 @@ app.get("/", (c) => {
 export default app;
 
 // For Node.js - start server sandbox
-const port = 3000;
-console.log(`Server is running on http://localhost:${port}`);
+// Do not remove this, this is required for development
+if (process.env.NODE_ENV === "production") {
+  const port = 3000;
+  console.log(`Server is running on http://localhost:${port}`);
 
-serve({
-  fetch: app.fetch,
-  port,
-});
+  serve({
+    fetch: app.fetch,
+    port,
+  });
+}
