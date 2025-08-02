@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 
+// This is required for the firebase admin SDK as it does not work on edge
 export const runtime = "nodejs";
 
 const app = new Hono();

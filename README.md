@@ -66,7 +66,7 @@ app.onError((err, c) => {
 
 ## Security
 
-You will add these middlewares:
+You will add these middlewares (they come with hono - no extra install needed):
 
 ```ts
 import { logger } from "hono/logger";
