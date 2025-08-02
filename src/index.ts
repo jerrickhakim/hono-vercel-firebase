@@ -11,10 +11,9 @@ app.get("/", (c) => {
   return c.text(welcomeStrings.join("\n\n"));
 });
 
-// For Cloudflare Workers
 export default app;
 
-// For Node.js - start server
+// For Node.js - start server sandbox
 const port = 3000;
 console.log(`Server is running on http://localhost:${port}`);
 

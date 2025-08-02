@@ -3,13 +3,6 @@ class APIError extends Error {
     super(message);
     this.statusCode = statusCode;
   }
-
-  toResponse() {
-    return {
-      message: this.message,
-      statusCode: this.statusCode,
-    };
-  }
 }
 
 export default APIError;
